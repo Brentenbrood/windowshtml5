@@ -4,14 +4,15 @@ $(document).ready(function(){
 	});
 	$('#cmd').draggable({
 		handle: ".dragbar",
+		zIndex: 100,
 		containment:"window",
-		start: function(event, ui) 
-		       { $(this).css("z-index", 1); }
+		stack: "div"
 		});
 	$('#time').draggable({
 		handle: ".dragbar",
+		zIndex: 100,
 		containment:"window",
-		start: function(event, ui) { $(this).css("z-index", 1); }
+		stack: "div"
 		});
 });
 
