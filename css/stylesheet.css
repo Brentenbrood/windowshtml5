@@ -93,20 +93,30 @@ body{
 }
 
 /* Toolbar related */
-.inbar {
-	height:40px;
-	width:60px;
-	color:white;
-}
 #barcmd {
-	background-color:#090;
 	height:40px;
 	width:60px;
 	float:left;
+	background-color:#090;
 }
 #bartime {
 	float:left;
 	background-color:#F60;
 	height:40px;
 	width:60px;
+}
+.inbar {
+	height:40px;
+	width:60px;
+	color:white;
+	background-color:#000;
+}
+
+.inbar{
+	z-index: 8;
+}
+
+.inbar:hover {
+	height:10px;
+	background-color:#CCC !important;
 }

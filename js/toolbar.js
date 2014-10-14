@@ -13,13 +13,18 @@ $(document).ready(function(){
 		if (dragid) {
 			switch(dragid) {
 				case 'cmd':
-				$('#dropit').append("<div id='barcmd' class='inbar'>hello world</div>");
+				$('#dropit').append("<div id='barcmd' name='"+dragid+"' class='inbar'></div>");
 				break;
 				
 				case 'time':
-				$('#dropit').append("<div id='bartime' class='inbar'>hello world</div>");
+				$('#dropit').append("<div id='bartime' name='"+dragid+"' class='inbar'></div>");
 				break;
 			}
 		}
 	};
+	$(document).on('click', ".inbar", function() {
+		var idout = $(this).attr('name');
+		$('#'+idout).css({display:'block'});
+		$(this).css({display:'none'});
+	});
 });
