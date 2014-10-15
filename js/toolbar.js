@@ -27,4 +27,7 @@ $(document).ready(function(){
 		$('#'+idout).css({display:'block'});
 		$(this).css({display:'none'});
 	});
+	$('#tools li').click(function(){
+		console.log($(this).find('span').attr('name'))
+	});
 });
