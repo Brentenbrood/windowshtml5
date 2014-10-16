@@ -19,7 +19,7 @@ body{
 .dropeet{
 	background-color:#333;
 }
-#cmd {
+.youtube {
 	position:absolute;
 	background-color: #FFF;
 	width:560px;
@@ -28,16 +28,20 @@ body{
 	-moz-box-shadow:    3px 3px 5px 0px rgba(50, 50, 50, 1);
 	box-shadow:         3px 3px 5px 0px rgba(50, 50, 50, 1);
 }
-#cmdinside {
+.youtubeinside {
 	background-color:lightgreen;
 	width:100%;
 	height:calc(100% - 26px);
 }
+.youtubeinside iframe {
+	width:100%;
+	height:100%;
+}
 #time {
 	position:absolute;
-	background-color: #FFC;
-	width:300px;
-	height:180px;
+	background-color:#FFC;
+	width:150px;
+	height:80px;
 	-webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 1);
 	-moz-box-shadow:    3px 3px 5px 0px rgba(50, 50, 50, 1);
 	box-shadow:         3px 3px 5px 0px rgba(50, 50, 50, 1);
@@ -102,6 +106,7 @@ body{
   color:black;
 }
 #tools ul li {
+  border-bottom-right-radius: 8px;
   font: bold 12px/18px sans-serif;
   display: inline-block;
   margin-right: -4px;
@@ -138,6 +143,7 @@ body{
   -transition: opacity 0.2s;
 }
 #tools ul li ul li { 
+  border-bottom-right-radius: 0px;
   background: #555; 
   display: block; 
   color: #fff;
@@ -155,9 +161,10 @@ body{
 	height:40px;
 	width:71px;
 	background-color:#000;
+	border-bottom-right-radius: 5px;
 }
 	
-#barcmd {
+.baryoutube {
 	height:40px;
 	width:60px;
 	float:left;

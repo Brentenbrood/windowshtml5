@@ -1,18 +1,18 @@
 $(document).ready(function(){
-	$('.iconclose').click(function(){
+	$(document).on('click', ".iconclose", function(){
 		var parent1 = $(this).parent();
 		$(parent1).parent().css({display:'none'});
 	});
-	$('#cmd').draggable({
+	$('.youtube').draggable({
 		handle: ".dragbar",
 		containment:"window",
 		stack: "div"
-		});
+		}).resizable();
 	$('#time').draggable({
 		handle: ".dragbar",
 		containment:"window",
 		stack: "div"
-		});
+		}).resizable({ minHeight: 80, minWidth: 150 });
 	function startTime() {
     var today=new Date();
     var h=today.getHours();

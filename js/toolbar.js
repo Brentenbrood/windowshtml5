@@ -4,6 +4,7 @@ $(document).ready(function(){
 		hoverClass: "dropeet",
      	drop: function( event, ui ) {
 		  var dragid = ui.draggable.attr("id");
+		  console.log(dragid);
 		  $('#'+dragid).css({display:'none'});
 		  console.log(dragid);
 		  putInBar(dragid);
@@ -12,8 +13,8 @@ $(document).ready(function(){
 	function putInBar(dragid) {
 		if (dragid) {
 			switch(dragid) {
-				case 'cmd':
-				$('#dropit').append("<div id='barcmd' name='"+dragid+"' class='inbar'></div>");
+				case 'youtube':
+				$('#dropit').append("<div id='baryoutube' name='"+dragid+"' class='inbar'></div>");
 				break;
 				
 				case 'time':
@@ -27,7 +28,9 @@ $(document).ready(function(){
 		$('#'+idout).css({display:'block'});
 		$(this).css({display:'none'});
 	});
-	$('#tools li').click(function(){
-		console.log($(this).find('span').attr('name'))
+	$('#tools li ul li').click(function(){
+		console.log($(this).attr('name'));
+		var createid = $(this).attr('name');
+			addWindow(createid);
 	});
 });
