@@ -19,7 +19,7 @@ body{
 .dropeet{
 	background-color:#333;
 }
-.youtube {
+#youtube {
 	position:absolute;
 	background-color: #FFF;
 	width:560px;
@@ -28,12 +28,12 @@ body{
 	-moz-box-shadow:    3px 3px 5px 0px rgba(50, 50, 50, 1);
 	box-shadow:         3px 3px 5px 0px rgba(50, 50, 50, 1);
 }
-.youtubeinside {
+#youtubeinside {
 	background-color:lightgreen;
 	width:100%;
 	height:calc(100% - 26px);
 }
-.youtubeinside iframe {
+#youtubeinside iframe {
 	width:100%;
 	height:100%;
 }
@@ -164,7 +164,7 @@ body{
 	border-bottom-right-radius: 5px;
 }
 	
-.baryoutube {
+#baryoutube {
 	height:40px;
 	width:60px;
 	float:left;

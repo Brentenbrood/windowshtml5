@@ -1,9 +1,9 @@
 $(document).ready(function(){
-	$(document).on('click', ".iconclose", function(){
+	$('.iconclose').click(function(){
 		var parent1 = $(this).parent();
 		$(parent1).parent().css({display:'none'});
 	});
-	$('.youtube').draggable({
+	$('#youtube').draggable({
 		handle: ".dragbar",
 		containment:"window",
 		stack: "div"
