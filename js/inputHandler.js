@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('.iconclose').click(function(){
+	$(document).on('click', ".iconclose", function() {
 		var parent1 = $(this).parent();
 		$(parent1).parent().css({display:'none'});
 	});
