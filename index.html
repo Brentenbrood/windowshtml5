@@ -1,31 +1,18 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Brent</title>
-		<link rel="stylesheet" href="css/stylesheet.css" />
-        <link rel="stylesheet" href="css/jquery-ui.css" />
-		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="js/inputHandler.js"></script>
-        <script type="text/javascript" src="js/toolbar.js"></script>
-        <script type="text/javascript" src="js/programs.js"></script>
-	</head>
-	<body>
-        <div id="header">
-            <div id="dropit">
-                <div id="tools">
-                	<ul>
-                    <li>Tools
-                	<ul>
-                        <li name="youtube">Youtube</li>
-                        <li name="time">Time</li>
-                	</ul>
-                    </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div id="content">
-        </div>
-	</body>
-</html>
+
+<html ng-app="mainApp">
+<head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+</head>
+
+<body ng-controller="dashboardController">
+
+<div id="main">
+    {{ message }}
+
+</div>
+
+</body>
+
+<script src="index.js"></script>
