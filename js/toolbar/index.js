@@ -1,5 +1,7 @@
 "use strict";
 
+angular.module('ToolbarCtrl', []);
+
 class ToolbarCtrl {
 
     constructor($http, $mdSidenav, $timeout) {
