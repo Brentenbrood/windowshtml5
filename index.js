@@ -1,6 +1,6 @@
 "use strict";
 
-var mainApp = angular.module('mainApp', ['ngRoute', 'ngResource', 'ngMaterial', 'ngAnimate', 'ngMessages', 'ngMdIcons', 'ui.router', 'angularMoment']);
+var mainApp = angular.module('mainApp', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngMdIcons', 'ui.router', 'angularMoment']);
 
 // Toolbar
 require('js/toolbar');
