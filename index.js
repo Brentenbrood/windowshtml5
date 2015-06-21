@@ -1,4 +1,13 @@
-var mainApp = angular.module('mainApp', ['ngRoute']);
+"use strict";
+
+var mainApp = angular.module('mainApp', ['ngRoute', 'ngResource', 'ngMaterial', 'ngAnimate', 'ngMessages', 'ngMdIcons', 'ui.router', 'angularMoment']);
+
+// Toolbar
+require('js/toolbar');
+// Settings
+require('js/widgets/settings');
+// Clock
+require('js/widgets/clock');
 
 mainApp.config(function($routeProvider) {
     $routeProvider
@@ -15,7 +24,6 @@ mainApp.config(function($routeProvider) {
 });
 
 mainApp.controller('dashboardController', function($scope) {
-
     $scope.message = 'HOME';
 });
 

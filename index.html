@@ -15,6 +15,26 @@
 
 <div id="main">
 
+    <md-toolbar ng-controller="ToolbarCtrl as toolbar" module="toolbar">
+        <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
+
+            <span flex="80"></span>
+            <md-button ng-click="toolbar.toggleSideBar()" class="md-primary">
+                <ng-md-icon icon="menu"> MENU </ng-md-icon>
+            </md-button>
+
+        </div>
+
+    </md-toolbar>
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+
+        <md-list>
+            <md-button ui-sref="settings"></md-button>
+            <md-button ui-sref="clock"></md-button>
+        </md-list>
+
+    </md-sidenav>
+
     <div ng-view></div>
 
 </div>
