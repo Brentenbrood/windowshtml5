@@ -12,25 +12,30 @@ require('js/widgets/clock');
 mainApp.config(function($routeProvider) {
     $routeProvider
 
+        .when('/', {
+            templateUrl : '',
+            controller  : 'dashboardCtrl'
+        })
+
         .when('/clock', {
             templateUrl : 'views/clock.php',
-            controller  : 'clockController'
+            controller  : 'clockCtrl'
         })
 
         .when('/settings', {
             templateUrl : 'views/settings.php',
-            controller  : 'settingsController'
+            controller  : 'settingsCtrl'
         });
 });
 
-mainApp.controller('dashboardController', function($scope) {
+mainApp.controller('dashboardCtrl', function($scope) {
     $scope.message = 'HOME';
 });
 
-mainApp.controller('clockController', function($scope) {
+mainApp.controller('clockCtrl', function($scope) {
     $scope.message = 'CLOCK';
 });
 
-mainApp.controller('settingsController', function($scope) {
+mainApp.controller('settingsCtrl', function($scope) {
     $scope.message = 'SETTINGS';
 });
