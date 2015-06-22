@@ -22,11 +22,3 @@ var mainApp = angular.module('mainApp', ['ngRoute', 'ngMaterial', 'ngAnimate', '
 mainApp.controller('dashboardCtrl', function($scope) {
     $scope.message = 'HOME';
 });
-
-mainApp.controller('clockCtrl', function($scope) {
-    $scope.message = 'CLOCK';
-});
-
-mainApp.controller('settingsCtrl', function($scope) {
-    $scope.message = 'SETTINGS';
-});
