@@ -15,15 +15,15 @@
     <link rel="stylesheet" href="css/jquery-ui.css" />
 </head>
 
-<body ng-controller="dashboardCtrl">
+<body>
 
 <div id="main">
 
-    <md-toolbar ng-controller="ToolbarCtrl as toolbar" module="toolbar">
+    <md-toolbar module="toolbar">
         <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
 
             <span flex="80"></span>
-            <md-button ng-click="toolbar.toggleSideBar()" class="md-primary">
+            <md-button class="md-primary">
                 <ng-md-icon icon="menu"> MENU </ng-md-icon>
             </md-button>
 

@@ -1,32 +1,23 @@
 "use strict";
 
-var mainApp = angular.module('mainApp', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngMdIcons', 'ui.router', 'angularMoment']);
-
-// Toolbar
-require('js/toolbar');
-// Settings
-require('js/widgets/settings');
-// Clock
-require('js/widgets/clock');
-
-mainApp.config(function($routeProvider) {
-    $routeProvider
-
-        .when('/', {
-            templateUrl : '',
-            controller  : 'dashboardCtrl'
-        })
-
-        .when('/clock', {
-            templateUrl : 'views/clock.php',
-            controller  : 'clockCtrl'
-        })
-
-        .when('/settings', {
-            templateUrl : 'views/settings.php',
-            controller  : 'settingsCtrl'
-        });
-});
+var mainApp = angular.module('mainApp', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngMdIcons', 'ui.router', 'angularMoment'])
+    .directive('toolbar', function() {
+        return {
+            restrict: 'E',
+            transclude: true,
+            scope: {},
+            controller: 'js/toolbar/toolbar.js'
+        };
+    })
+    .directive('clock', function() {
+        return {
+            require: '^js/widgets/clock/clock.js',
+            restrict: 'E',
+            transclude: true,
+            controller: 'js/widgets/clock/clock.js',
+            templateUrl: 'views/clock.html'
+        };
+    });
 
 mainApp.controller('dashboardCtrl', function($scope) {
     $scope.message = 'HOME';
